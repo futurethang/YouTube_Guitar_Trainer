@@ -17,6 +17,7 @@ In addition to basic functionality, the app can ultimately include
 * Some kind of Spotify integration with saved playlists generating how-to videos
 * Links to useful guitar resources like Metronome, Tuner, tab search, etc.
 * selecting different genres changes the background and page styles
+* rating system so that bad videos don't come up again
 
 https://developers.google.com/youtube/
 
