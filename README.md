@@ -4,7 +4,7 @@ A YouTube API web App for finding guitar lesson videos.
 # Objectives
 This app is meant to make it easy to jump online for a daily lesson, with minimal user parameter selection and focus on getting in and start playing quickly. 
 
-The user can select a skill level, a genre, a format (exercise, lick, or song), a max video length, and add optional keywords to their search.
+The user can select a skill level, a genre, a format (exercise, lick, or song), a max video length (or 'length of lesson: short, medium, long"), and add optional keywords to their search.
 
 A submit button then returns a random video pick that meets the search terms without clearing the input fields.
 
