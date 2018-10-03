@@ -1,4 +1,4 @@
-# YouTube_Guitar_Trainer
+# YouTube_Guitar_Trainer - Chop Shop
 A YouTube API web App for finding guitar lesson videos.
 
 # Objectives
