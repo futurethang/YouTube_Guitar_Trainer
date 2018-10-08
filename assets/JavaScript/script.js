@@ -1,7 +1,8 @@
 $(function () {
 
   var videoList;
-  var currentVideo;
+  var currentVideoMeta = {};
+  var currentVideoId;
 
   var randomSelect = function (length) {
     return Math.floor((Math.random() * length) + 1)
@@ -36,7 +37,10 @@ $(function () {
         videoList = response.items;
         console.log(videoList);
         var selection = randomSelect(videoList.length);
-        currentVideo = videoList[selection].id.videoId;
+        currentVideoMeta = videoList[selection];
+        currentVideoId = videoList[selection].id.videoId;
+        var embedUrl = "http://www.youtube.com/embed/" + currentVideoId + "?autoplay=1&cc_load_policy=1"
+        $("#feature_video").attr("src", embedUrl);
         debugger;
       }
     });
