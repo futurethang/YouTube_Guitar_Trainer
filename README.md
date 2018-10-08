@@ -24,3 +24,7 @@ https://developers.google.com/youtube/
 https://www.youtube.com/watch?v=ogG_nZggraw
 
 https://developers.google.com/youtube/v3/docs/search/list
+
+
+Note to self: steal and borrow as much as possible!
+Don't waste time making forms, writing raw CSS when Bootstrap will do, etc.
