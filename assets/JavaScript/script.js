@@ -1,8 +1,13 @@
 $(function () {
 
+  var videoList;
+  var currentVideo;
+
   var randomSelect = function (length) {
     return Math.floor((Math.random() * length) + 1)
   }
+
+  var newVideo = function () { } // A FUNCTION TO SELECT A NEW VIDEO FROM THE CURRENT QUERY, AS OPPOSED TO NEW SEARCH
 
   $(".toggle-sidebar").on("click", function () {
     $("#sidebar").toggleClass("collapsed");
@@ -24,21 +29,21 @@ $(function () {
     var queryString = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&order=relevance&q=" + searchString + "&topicId=%2Fm%2F04rlf&type=video&videoCaption=any&key=" + apiKey;
 
     // API CALL TO YOUTUBE HERE
-
-    
-
     $.ajax({
       type: "get",
       url: queryString,
       success: function (response) {
-        console.log(response);
-        var videoList = response.items;
+        videoList = response.items;
         console.log(videoList);
         var selection = randomSelect(videoList.length);
+        currentVideo = videoList[selection].id.videoId;
         debugger;
       }
     });
   });
 
 
-});
+
+
+
+}); //// END OF DOCUMENT READY
