@@ -1,4 +1,5 @@
 $(function () {
+  alert("js loaded");
 
   var videoList;
   var currentVideoMeta = {};
@@ -17,6 +18,7 @@ $(function () {
 
   $("#new_search").submit(function (event) {
     event.preventDefault();
+    $("#feature_video").attr("src", "");
     var level = $("#skill_level").val();
     var type = $("#lesson_format").val();
     var length = $("#lesson_length").val();
