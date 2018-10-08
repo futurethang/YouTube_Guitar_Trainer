@@ -1,5 +1,4 @@
 $(function () {
-  alert("js loaded");
 
   var videoList;
   var currentVideoMeta = {};
@@ -43,7 +42,6 @@ $(function () {
         currentVideoId = videoList[selection].id.videoId;
         var embedUrl = "http://www.youtube.com/embed/" + currentVideoId + "?autoplay=1&cc_load_policy=1"
         $("#feature_video").attr("src", embedUrl);
-        debugger;
       }
     });
   });

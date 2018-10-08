@@ -17,47 +17,40 @@
   <header></header>
 
   <div class="container">
-      <nav class=".col-md-3" id="sidebar">
-          <div class="nav-header">
-            <h1>KevDev Guitar Lesson Gallery</h1>
+    <div class="nav-header">
+      <h1>KevDev Guitar Lesson Gallery</h1>
+    </div>
+    <nav>
+      <form id="new_search">
+        <div class="form-row">
+          <div class="col-12 form_fields">
+
+            <select name="sources" id="skill_level" class="custom-select sources" placeholder="Skill Level">
+              <option value="beginner" id="dd_beginner">Beginner</option>
+              <option value="intermediate" id="dd_intermediate">Intermediate</option>
+              <option value="advanced" id="dd_advanced">Advanced</option>
+            </select>
+
+            <select name="sources" id="lesson_format" class="custom-select sources" placeholder="Lesson Format">
+              <option value="exercises" id="dd_exercise">Exercise</option>
+              <option value="lick" id="dd_lick">Lick</option>
+              <option value="riff" id="dd_riff">Riff</option>
+              <option value="song" id="dd_song">Song</option>
+            </select>
+
+            <input type="text" class="form-control sources" placeholder="Genre" id="genre">
+            <input type="text" class="form-control sources" placeholder="Keyword" id="keyword">
+            <button type="submit" class="btn btn-light sources" id="submit">Submit</button>
+
           </div>
-          <form id="new_search">
-            <div class="form-row">
-              <div class="col-12 form_fields">
-      
-                <select name="sources" id="skill_level" class="custom-select sources" placeholder="Skill Level">
-                  <option value="beginner" id="dd_beginner">Beginner</option>
-                  <option value="intermediate" id="dd_intermediate">Intermediate</option>
-                  <option value="advanced" id="dd_advanced">Advanced</option>
-                </select>
-      
-                <select name="sources" id="lesson_format" class="custom-select sources" placeholder="Lesson Format">
-                  <option value="exercises" id="dd_exercise">Exercise</option>
-                  <option value="lick" id="dd_lick">Lick</option>
-                  <option value="riff" id="dd_riff">Riff</option>
-                  <option value="song" id="dd_song">Song</option>
-                </select>
-      
-                <select name="sources" id="lesson_length" class="custom-select sources" placeholder="Lesson Length">
-                  <option value="short" id="dd_short">Short</option>
-                  <option value="medium" id="dd_medium">Medium</option>
-                  <option value="long" id="dd_long">Long</option>
-                </select>
-      
-                <input type="text" class="form-control sources" placeholder="Genre" id="genre">
-                <input type="text" class="form-control sources" placeholder="Keyword" id="keyword">
-                <button type="submit" class="btn btn-light sources" id="submit">Submit</button>
-                <button type="button" class="btn btn-default toggle-sidebar sources">Toggle sidebar</button>
-      
-              </div>
-            </div>
-          </form>
-        </nav>
-      
-        <main class="col-md-9" id="#content">
-          <iframe width="420" height="315" src="" frameborder="0" allowfullscreen id="feature_video"></iframe>
-        </main>
-          
+        </div>
+      </form>
+    </nav>
+
+    <main class="responsive">
+      <iframe width="420" height="315" src="" frameborder="0" allowfullscreen id="feature_video"></iframe>
+    </main>
+
   </div>
 
 
