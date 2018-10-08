@@ -14,6 +14,10 @@ nav {
   height: 150px;
 }
 
+.nav-header > h1 {
+  color: yellow;
+}
+
 .form_fields {
   display: flex;
   flex-direction: column;
@@ -23,6 +27,8 @@ nav {
 
 .sources {
   display: block;
+  background-color: brown;
+  color: yellow;
 }
 
 /* COLLAPSABLE SIDE BAR */
@@ -40,7 +46,7 @@ nav {
   .collapsed {
     display: block;
     /* same width as sidebar */
-    margin-left: -25%;
+    margin-left: -33%;
   }
 }
 
