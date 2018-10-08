@@ -16,49 +16,48 @@
 
   <header></header>
 
-
-
-  <nav>
-    <form>
-      <div class="form-row">
-        <div class="col-12 form_fields">
+  <div class="container">
+      <nav class=".col-md-3" id="sidebar">
+          <div class="nav-header">
+      
+          </div>
+          <form>
+            <div class="form-row">
+              <div class="col-12 form_fields">
+      
+                <select name="sources" id="skill_level" class="custom-select sources" placeholder="Skill Level">
+                  <option value="profile" id="dd_beginner">Beginner</option>
+                  <option value="word" id="dd_intermediate">Intermediate</option>
+                  <option value="hashtag" id="dd_advanced">Advanced</option>
+                </select>
+      
+                <select name="sources" id="lesson_format" class="custom-select sources" placeholder="Lesson Format">
+                  <option value="profile" id="dd_exercise">Exercise</option>
+                  <option value="word" id="dd_lick">Lick</option>
+                  <option value="hashtag" id="dd_riff">Riff</option>
+                  <option value="hashtag" id="dd_song">Song</option>
+                </select>
+      
+                <select name="sources" id="lesson_length" class="custom-select sources" placeholder="Lesson Length">
+                  <option value="profile" id="dd_short">Short</option>
+                  <option value="word" id="dd_medium">Medium</option>
+                  <option value="hashtag" id="dd_long">Long</option>
+                </select>
+      
+                <input type="text" class="form-control sources" placeholder="Genre">
+                <input type="text" class="form-control sources" placeholder="Keyword">
+                <button type="submit" class="btn btn-light">Submit</button>
+                <button type="button" class="btn btn-default toggle-sidebar">Toggle sidebar</button>
+      
+              </div>
+            </div>
+          </form>
+        </nav>
+      
+        <main class="col-md-9" id="#content"></main>
           
-          <select name="sources" id="skill_level" class="custom-select sources" placeholder="Skill Level">
-            <option value="profile" id="dd_beginner">Beginner</option>
-            <option value="word" id="dd_intermediate">Intermediate</option>
-            <option value="hashtag" id="dd_advanced">Advanced</option>
-          </select>
+  </div>
 
-          <select name="sources" id="lesson_format" class="custom-select sources" placeholder="Lesson Format">
-            <option value="profile" id="dd_exercise">Exercise</option>
-            <option value="word" id="dd_lick">Lick</option>
-            <option value="hashtag" id="dd_riff">Riff</option>
-            <option value="hashtag" id="dd_song">Song</option>
-          </select>
-
-          <select name="sources" id="lesson_length" class="custom-select sources" placeholder="Lesson Length">
-            <option value="profile" id="dd_short">Short</option>
-            <option value="word" id="dd_medium">Medium</option>
-            <option value="hashtag" id="dd_long">Long</option>
-          </select>
-
-          <input type="text" class="form-control" placeholder="Genre">
-          <input type="text" class="form-control" placeholder="Keyword">
-
-        </div>
-      </div>
-      <div class="col">
-
-      </div>
-
-      <div class="col">
-
-      </div>
-      </div>
-    </form>
-  </nav>
-
-  <main></main>
 
   <footer></footer>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -67,6 +66,7 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+  <script src="assets/JavaScript/script.js"></script>
 </body>
 
 </html>
