@@ -29,6 +29,22 @@ nav {
   align-items:center;
 }
 
+#skill_level {
+  width: 30vmin;
+}
+
+#lesson_format {
+  width: 30vmin;
+}
+
+#genre {
+  width: 20vmin;
+}
+
+#keyword {
+  width: 20vmin;
+}
+
 .sources {
   display: inline-block;
   background-color: brown;
@@ -54,10 +70,14 @@ section.video_info {
 }
 
 section.video_info h3 {
-  display: inline;
+  font-size: 3.5vmin;
+}
+
+section.videoChannelWrapper {
+  font-size: 2.5vmin;
 }
 
 section.video_actions {
-  margin-top: 12px;
+  margin-top: 16px;
   margin-bottom: 24px;
 }

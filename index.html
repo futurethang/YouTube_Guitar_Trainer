@@ -40,7 +40,7 @@
 
             <input type="text" class="form-control sources" placeholder="Genre" id="genre">
             <input type="text" class="form-control sources" placeholder="Keyword" id="keyword">
-            <button type="submit" class="btn btn-light sources" id="submit">Submit</button>
+            <button type="submit" class="btn btn-light sources" id="submit">New Search</button>
 
           </div>
         </div>
@@ -52,10 +52,11 @@
     </main>
 
     <section class="video_info">
-      <h3>Video Title</h3> - <a href="">Video Channel</a>
+      <h3 id="videoTitle"></h3>
+      <span id="videoChannelWrapper">YouTube Channel:&nbsp;&nbsp;<a href="" id="videoChannel" target="blank"></a></span>
     </section>
     <section class="video_actions">
-      <button class="btn btn-dark">Load Another Video</button>
+      <button class="btn btn-dark" id="newVideo">Load Another Video</button>
       <button class="btn btn-dark">Save This Video</button>
     </section>
 

@@ -10,6 +10,21 @@ $(function () {
 
   var newVideo = function () { } // A FUNCTION TO SELECT A NEW VIDEO FROM THE CURRENT QUERY, AS OPPOSED TO NEW SEARCH
 
+  var loadVideo = function (videoList) {
+    var selection = randomSelect(videoList.length);
+    console.log(selection);
+    currentVideoMeta = videoList[selection];
+    currentVideoId = videoList[selection].id.videoId;
+    var embedUrl = "http://www.youtube.com/embed/" + currentVideoId + "?autoplay=1&cc_load_policy=1"
+    var title = currentVideoMeta.snippet.title;
+    var channel = currentVideoMeta.snippet.channelTitle;
+    var channelLink = "https://www.youtube.com/channel/" + currentVideoMeta.snippet.channelId;
+    $("#feature_video").attr("src", embedUrl);
+    $("#videoTitle").empty().text(title);
+    $("#videoChannel").empty().text(channel);
+    $("#videoChannel").attr("href", channelLink);
+  }
+
   $(".toggle-sidebar").on("click", function () {
     $("#sidebar").toggleClass("collapsed");
     $("#content").toggleClass("col-md-12 col-md-9");
@@ -18,6 +33,7 @@ $(function () {
   $("#new_search").submit(function (event) {
     event.preventDefault();
     $("#feature_video").attr("src", "");
+    $("#videoChannel").attr("href", "");
     var level = $("#skill_level").val();
     var type = $("#lesson_format").val();
     var length = $("#lesson_length").val();
@@ -36,15 +52,14 @@ $(function () {
       url: queryString,
       success: function (response) {
         videoList = response.items;
-        console.log(videoList);
-        var selection = randomSelect(videoList.length);
-        currentVideoMeta = videoList[selection];
-        currentVideoId = videoList[selection].id.videoId;
-        var embedUrl = "http://www.youtube.com/embed/" + currentVideoId + "?autoplay=1&cc_load_policy=1"
-        $("#feature_video").attr("src", embedUrl);
+        loadVideo(videoList);
       }
     });
   });
+
+  $("#newVideo").on("click", function () {
+    loadVideo(videoList);
+  })
 
 
 
