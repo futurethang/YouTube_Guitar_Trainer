@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400|Pacifico');
+
 body {
   background-color: brown;
 }
@@ -6,7 +8,7 @@ nav {
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: 10px 0 20px 0;
 }
 
 .container {
@@ -16,9 +18,11 @@ nav {
   height: 100%;
   display: flex;
   justify-content: center;
+  padding: 14px 0 7px 0;
 }
 
 .nav-header > h1 {
+  font-family: 'Pacifico', sans-serif;
   color: yellow;
 }
 
@@ -29,27 +33,32 @@ nav {
   align-items:center;
 }
 
-#skill_level {
+#skill_level, #lesson_format {
   width: 30vmin;
+  padding: 0 0 0 10px;
+  height: 44px;
 }
 
-#lesson_format {
+/* #lesson_format {
   width: 30vmin;
-}
+} */
 
-#genre {
+#genre, #keyword {
   width: 20vmin;
 }
 
-#keyword {
+/* #keyword {
   width: 20vmin;
-}
+} */
 
 .sources {
   display: inline-block;
   background-color: brown;
   color: yellow;
   margin: 5px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
 }
 
 .responsive {
@@ -71,10 +80,13 @@ section.video_info {
 
 section.video_info h3 {
   font-size: 3.5vmin;
+  font-family: 'Oswald', sans-serif;
 }
 
 section.videoChannelWrapper {
   font-size: 2.5vmin;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
 }
 
 section.video_actions {
