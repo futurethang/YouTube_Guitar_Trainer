@@ -6,6 +6,7 @@ nav {
   position: relative;
   width: 100%;
   height: 100%;
+  padding: 10px;
 }
 
 .container {
@@ -13,6 +14,8 @@ nav {
 
 .nav-header {
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-header > h1 {
@@ -30,6 +33,7 @@ nav {
   display: inline-block;
   background-color: brown;
   color: yellow;
+  margin: 5px;
 }
 
 .responsive {
@@ -43,4 +47,17 @@ nav {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+section.video_info {
+  margin-top: 12px;
+}
+
+section.video_info h3 {
+  display: inline;
+}
+
+section.video_actions {
+  margin-top: 12px;
+  margin-bottom: 24px;
 }
