@@ -56,7 +56,7 @@ $(function () {
     // BUILD A QUERY STRING
     var searchString = level + "+" + genre + "+" + "guitar" + "+" + type + "+" + keywords; // IS LENGTH A SPECIAL STRING?
     var apiKey = "AIzaSyDZ0DP1vMYabAwTtRsbTfRAqnswG0jTh_M";
-    var queryString = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&order=relevance&q=" + searchString + "&topicId=%2Fm%2F04rlf&type=video&videoCaption=any&key=" + apiKey;
+    var queryString = "http://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&order=relevance&q=" + searchString + "&topicId=%2Fm%2F04rlf&type=video&videoCaption=any&key=" + apiKey;
 
     // API CALL TO YOUTUBE HERE
     $.ajax({
