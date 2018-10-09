@@ -1,14 +1,14 @@
-# YouTube_Guitar_Trainer - Chop Shop
+# YouTube_Guitar_Trainer - Chops Shop
 A YouTube API web App for finding guitar lesson videos.
 
 # Objectives
 This app is meant to make it easy to jump online for a daily lesson, with minimal user parameter selection and focus on getting in and start playing quickly. 
 
-The user can select a skill level, a genre, a format (exercise, lick, or song), a max video length (or 'length of lesson: short, medium, long"), and add optional keywords to their search.
+The user can select a skill level, a format (exercise, lick, or song), a genre, and add optional keywords to their search.
 
 A submit button then returns a random video pick that meets the search terms without clearing the input fields.
 
-Below the video are options to save the link, share, or load another video
+Below the video are options to save the link, share, or load another video from the same search parameters.
 
 # Robust Features
 In addition to basic functionality, the app can ultimately include
@@ -28,3 +28,9 @@ https://developers.google.com/youtube/v3/docs/search/list
 
 Note to self: steal and borrow as much as possible!
 Don't waste time making forms, writing raw CSS when Bootstrap will do, etc.
+
+
+#### SEEK HELP:
+*Front-end tools to help with layout and drop-down animations
+*What's wrong with the way I am approaching my desired menu action?
+*Why does the embed window auto-load the previous video?

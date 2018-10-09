@@ -1,3 +1,15 @@
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyD-3892e6WguvvFdYO2nFbuKyh_Whc5fTk",
+  authDomain: "youttube-guitar-theater.firebaseapp.com",
+  databaseURL: "https://youttube-guitar-theater.firebaseio.com",
+  projectId: "youttube-guitar-theater",
+  storageBucket: "youttube-guitar-theater.appspot.com",
+  messagingSenderId: "985777305020"
+};
+firebase.initializeApp(config);
+
+
 $(function () {
 
   var videoList;
