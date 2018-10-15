@@ -39,17 +39,9 @@ nav {
   height: 44px;
 }
 
-/* #lesson_format {
-  width: 30vmin;
-} */
-
 #genre, #keyword {
   width: 20vmin;
 }
-
-/* #keyword {
-  width: 20vmin;
-} */
 
 .sources {
   display: inline-block;
@@ -92,4 +84,8 @@ section.videoChannelWrapper {
 section.video_actions {
   margin-top: 16px;
   margin-bottom: 24px;
+}
+
+.modal-content {
+  padding: 16px;
 }

@@ -34,5 +34,13 @@ Don't waste time making forms, writing raw CSS when Bootstrap will do, etc.
 #### SEEK HELP:
 *Front-end tools to help with layout and drop-down animations
 ! maybe an expanding bootstrap box that blends in and says "new search" and put a form in it instead of a list. This can work for the Tools and Saved lists below as well
+https://getbootstrap.com/docs/4.0/components/collapse/
 *What's wrong with the way I am approaching my desired menu action?
 *Why does the embed window auto-load the previous video?
+
+
+### User Login Steps:
+* build login modal
+  - options for new and returning
+* firebase DB to save video
+* button display updates to main view

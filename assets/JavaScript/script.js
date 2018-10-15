@@ -9,12 +9,35 @@ var config = {
 };
 firebase.initializeApp(config);
 
+var auth = firebase.auth();
+var database = firebase.database();
+
+// // AUTHENTICATION STATE OBSERVER
+// firebase.auth().onAuthStateChanged(function(user) {
+//   if (user) {
+//     // User is signed in.
+//     var displayName = user.displayName;
+//     var email = user.email;
+//     var emailVerified = user.emailVerified;
+//     var photoURL = user.photoURL;
+//     var isAnonymous = user.isAnonymous;
+//     var uid = user.uid;
+//     var providerData = user.providerData;
+//     // ...
+//   } else {
+//     // User is signed out.  
+//     // ...
+//   }
+// });
 
 $(function () {
 
   var videoList;
   var currentVideoMeta = {};
   var currentVideoId;
+  var loginEmail = $("#inputEmail").val();
+  var loginPassword = $("#inputPassword").val();
+  var userEmail;
 
   var randomSelect = function (length) {
     return Math.floor((Math.random() * length) + 1)
@@ -36,11 +59,6 @@ $(function () {
     $("#videoChannel").empty().text(channel);
     $("#videoChannel").attr("href", channelLink);
   }
-
-  $(".toggle-sidebar").on("click", function () {
-    $("#sidebar").toggleClass("collapsed");
-    $("#content").toggleClass("col-md-12 col-md-9");
-  })
 
   $("#new_search").submit(function (event) {
     event.preventDefault();
@@ -73,8 +91,52 @@ $(function () {
     loadVideo(videoList);
   })
 
+  $('#loginModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  })
 
+  function writeUserData(userId, email) {
+    firebase.database().ref('users/' + userId).set({
+      email: email
+    });
+  }
 
+  $("#returning_user").on("click", function (e) {
+    e.preventDefault();
+    const email = $("#inputEmail").val();
+    const pass = $("#inputPassword").val();
+    const promise = auth.signInWithEmailAndPassword(email, pass);
+    promise.catch(e => console.log(e.message));
+  })
 
+  $("#new_user").on("click", function (e) {
+    e.preventDefault();
+    const email = $("#inputEmail").val();
+    const pass = $("#inputPassword").val();
+    const promise = auth.createUserWithEmailAndPassword(email, pass);
+    promise.then(function(user) {
+      console.log(user);
+      var userId = firebase.auth().currentUser.uid;
+      // debugger;
+      writeUserData(userId, email);
+    })
+    promise.catch(e => console.log(e.message));
+  })
+
+  auth.onAuthStateChanged(firebaseUser => {
+    if (firebaseUser) {
+      console.log(firebaseUser.email);
+      userEmail = firebaseUser.email;
+      database.ref().push({
+        email: userEmail,
+        savedVideos: 0,
+      });
+      console.log(database.ref());
+      // unhide logout button
+    } else {
+      console.log("not logged in");
+      // hide logout button
+    }
+  });
 
 }); //// END OF DOCUMENT READY
