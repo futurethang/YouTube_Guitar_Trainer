@@ -62,6 +62,7 @@ $(function () {
 
   $("#new_search").submit(function (event) {
     event.preventDefault();
+    $(".container").removeClass("d-none");
     $("#feature_video").attr("src", "");
     $("#videoChannel").attr("href", "");
     var level = $("#skill_level").val();
@@ -97,6 +98,7 @@ $(function () {
 
   $("#saveVideo").on('click', function (e) { // FUNCTION TO APPEND THE TABLE WITH A NEW VIDEO
     e.preventDefault();
+    $(".table").removeClass("d-none");
     var videoTitle = $("#videoTitle").text();
     var level = $("#skill_level").val();
     var type = $("#lesson_format").val();
