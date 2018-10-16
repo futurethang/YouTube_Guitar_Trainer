@@ -31,6 +31,7 @@ var database = firebase.database();
 // });
 
 $(function () {
+  $("#page_load_modal").modal('show');
 
   var videoList;
   var currentVideoMeta = {};
