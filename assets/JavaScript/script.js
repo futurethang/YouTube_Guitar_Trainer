@@ -97,22 +97,28 @@ $(function () {
   //   $('#myInput').trigger('focus')
   // })
 
+  $("#shareVideo").on('click', function (e) {
+    e.preventDefault();
+    alert("This feature coming soon!");
+  })
+
   $("#saveVideo").on('click', function (e) { // FUNCTION TO APPEND THE TABLE WITH A NEW VIDEO
     e.preventDefault();
-    $(".table").removeClass("d-none");
-    var videoTitle = $("#videoTitle").text();
-    var level = $("#skill_level").val();
-    var type = $("#lesson_format").val();
-    var genre = $("#genre").val();
-    var keywords = $("#keyword").val();
+    alert("This feature coming soon!");
+    // $(".table").removeClass("d-none");
+    // var videoTitle = $("#videoTitle").text();
+    // var level = $("#skill_level").val();
+    // var type = $("#lesson_format").val();
+    // var genre = $("#genre").val();
+    // var keywords = $("#keyword").val();
 
-    var newRow = $("<tr>").append(
-      $("<td>").html('<a href="https://www.youtube.com/watch?v=' + currentVideoId + '" target="_blank">' + videoTitle + '</a>'),
-      $("<td>").text(level),
-      $("<td>").text(type),
-      $("<td>").text(genre + ', ' + keywords));
+    // var newRow = $("<tr>").append(
+    //   $("<td>").html('<a href="https://www.youtube.com/watch?v=' + currentVideoId + '" target="_blank">' + videoTitle + '</a>'),
+    //   $("<td>").text(level),
+    //   $("<td>").text(type),
+    //   $("<td>").text(genre + ', ' + keywords));
 
-    $(".table > tbody").append(newRow);
+    // $(".table > tbody").append(newRow);
   })
 
   function writeUserData(userId, email) {
