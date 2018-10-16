@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400|Pacifico');
 
 body {
-  background-color: brown;
+  background-color: #150000;
 }
 
 nav {
@@ -68,6 +68,7 @@ nav {
 
 section.video_info {
   margin-top: 12px;
+  color: cornsilk;
 }
 
 section.video_info h3 {

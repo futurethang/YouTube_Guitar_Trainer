@@ -40,7 +40,8 @@ https://getbootstrap.com/docs/4.0/components/collapse/
 
 
 ### User Login Steps:
-* build login modal
-  - options for new and returning
+* build a non-db list function to save video links on click
 * firebase DB to save video
 * button display updates to main view
+* set a max length for the title string in the table, end with "..."
+* 

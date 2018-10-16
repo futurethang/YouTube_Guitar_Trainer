@@ -66,7 +66,6 @@ $(function () {
     $("#videoChannel").attr("href", "");
     var level = $("#skill_level").val();
     var type = $("#lesson_format").val();
-    var length = $("#lesson_length").val();
     var genre = $("#genre").val();
     var keywords = $("#keyword").val();
 
@@ -91,8 +90,26 @@ $(function () {
     loadVideo(videoList);
   })
 
-  $('#loginModal').on('shown.bs.modal', function () {
-    $('#myInput').trigger('focus')
+  // Modal Toggle Click Event
+  // $('#loginModal').on('shown.bs.modal', function () {
+  //   $('#myInput').trigger('focus')
+  // })
+
+  $("#saveVideo").on('click', function (e) { // FUNCTION TO APPEND THE TABLE WITH A NEW VIDEO
+    e.preventDefault();
+    var videoTitle = $("#videoTitle").text();
+    var level = $("#skill_level").val();
+    var type = $("#lesson_format").val();
+    var genre = $("#genre").val();
+    var keywords = $("#keyword").val();
+
+    var newRow = $("<tr>").append(
+      $("<td>").html('<a href="https://www.youtube.com/watch?v=' + currentVideoId + '" target="_blank">' + videoTitle + '</a>'),
+      $("<td>").text(level),
+      $("<td>").text(type),
+      $("<td>").text(genre + ', ' + keywords));
+
+    $(".table > tbody").append(newRow);
   })
 
   function writeUserData(userId, email) {
@@ -114,7 +131,7 @@ $(function () {
     const email = $("#inputEmail").val();
     const pass = $("#inputPassword").val();
     const promise = auth.createUserWithEmailAndPassword(email, pass);
-    promise.then(function(user) {
+    promise.then(function (user) {
       console.log(user);
       var userId = firebase.auth().currentUser.uid;
       // debugger;
