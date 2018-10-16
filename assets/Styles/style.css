@@ -90,3 +90,34 @@ section.video_actions {
 .modal-content {
   padding: 16px;
 }
+
+.card-header {
+  padding: 0 1.25rem;
+  margin-top: 6px;
+  background: #3e0000;
+
+}
+
+.card {
+  height: 111px;
+  background: #150000;
+}
+
+.card-body {
+  padding: 0;
+}
+
+h5.mb-0 {
+  text-align: center;
+}
+
+.video_actions > .btn {
+  margin-right: 5px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+#newVideo {
+  color: yellow;
+}
