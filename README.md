@@ -1,6 +1,8 @@
 # YouTube_Guitar_Trainer - Chops Shop
 A YouTube API web App for finding guitar lesson videos. Try it here: https://futurethang.github.io/YouTube_Guitar_Trainer/
 
+![screen shot 2018-10-16 at 7 52 02 pm](https://user-images.githubusercontent.com/17099707/47230366-e66c5700-d37e-11e8-9e89-6924cdf5a63d.png)
+
 # Objectives
 This app is meant to make it easy to jump online for a daily lesson, with minimal user parameter selection and focus on getting in and start playing quickly. 
 
