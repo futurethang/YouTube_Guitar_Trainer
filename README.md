@@ -3,7 +3,7 @@ A YouTube API web App for finding guitar lesson videos. Try it here: https://fut
 
 ![screen shot 2018-10-16 at 7 52 02 pm](https://user-images.githubusercontent.com/17099707/47230366-e66c5700-d37e-11e8-9e89-6924cdf5a63d.png)
 
-# Objectives
+## Objectives
 This app is meant to make it easy to jump online for a daily lesson, with minimal user parameter selection and focus on getting in and start playing quickly. 
 
 The user can select a skill level, a format (exercise, lick, or song), a genre, and add optional keywords to their search.
@@ -12,7 +12,7 @@ A submit button then returns a random video pick that meets the search terms wit
 
 Below the video are options to save the link, share, or load another video from the same search parameters.
 
-# Robust Features
+## More Robust Feature Development
 In addition to basic functionality, the app can ultimately include
 * A user login to save their favorite videos, or integrate with their Google Login
 This can be a bootstrap modal window
@@ -41,9 +41,8 @@ https://getbootstrap.com/docs/4.0/components/collapse/
 *Why does the embed window auto-load the previous video?
 
 
-### User Login Steps:
+#### User Login Steps:
 * build a non-db list function to save video links on click
 * firebase DB to save video
 * button display updates to main view
 * set a max length for the title string in the table, end with "..."
-* 
